@@ -3,6 +3,7 @@ body{
 }
 h1{
     color: rgb(0, 255, 255);
+    font-style: var(aqua);
 }
 p{
 color: aqua;
