@@ -3,8 +3,13 @@ body{
 }
 h1{
     color: rgb(0, 255, 255);
-    font-style: oblique;
+    font-style: inherit;
 }
+
 p{
 color: aqua;
+}
+
+.triângulo{
+width: auto;
 }
