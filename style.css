@@ -1,13 +1,13 @@
 body{
-    background-color: rgb(249, 255, 184);
+    background-color: rgb(251, 255, 214);
 }
 h1{
-    color: rgb(0, 255, 255);
+    color: #9c1010;
     font-style: inherit;
 }
 
 p{
-color: aqua;
+color: rgb(137, 8, 8);
 }
 
 .triângulo{
