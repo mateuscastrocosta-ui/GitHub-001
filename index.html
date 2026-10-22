@@ -3,55 +3,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda o triângulo de exposição na fotografia: Abertura, Velocidade do Obturador e ISO. Guia didático para iniciantes.">
+    <!-- Favicon usando emoji SVG -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>">
     <title>Conhecendo a Fotografia</title>
+    <!-- Aqui conectamos o arquivo CSS que está na outra aba -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><a href="https://www.youtube.com/watch?v=_EyHWJt9cDs"></a></header>
- <h1>Conhecendo a Fotografia 📸</h1>
+    <!-- Link de acessibilidade: permite pular o menu e ir direto ao conteúdo -->
+    <a href="#conteudo-principal" class="pular-conteudo">Pular para o conteúdo</a>
 
- <p>Seja bem-vindo ao Conhecendo a Fotografia, o seu espaço definitivo para explorar o universo das imagens. Nosso objetivo é simplificar a arte de fotografar, oferecendo dicas práticas, tutoriais acessíveis e inspirações para entusiastas de todos os níveis. Aqui, você aprende a dominar o seu equipamento e a transformar momentos simples em registros inesquecíveis. Descubra o mundo através das lentes e desenvolva o seu olhar fotográfico conosco!</p>
+    <header class="cabecalho">
+        <div class="container">
+            <!-- Único H1 da página (ótimo para o Google/SEO) -->
+            <h1>Conhecendo a Fotografia 📸</h1>
+            <p>Seu guia definitivo para explorar o universo das imagens e dominar a luz.</p>
+        </div>
+        <nav class="navegacao">
+            <ul class="menu">
+                <li><a href="#introducao">Início</a></li>
+                <li><a href="#abertura">Abertura</a></li>
+                <li><a href="#obturador">Obturador</a></li>
+                <li><a href="#iso">ISO</a></li>
+                <li><a href="#resumo">Resumo</a></li>
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
 
- <p>A fotografia pode parecer complicada no início, mas ela se apoia em três elementos fundamentais que, juntos, controlam a exposição de qualquer imagem. Dominar esses três pilares é o primeiro grande passo para deixar o modo automático para trás e passar a ter controle total sobre as suas fotos.</p>
+    <main id="conteudo-principal" class="container">
+        
+        <section id="introducao" class="secao">
+            <h2>Os Pilares da Fotografia</h2>
+            <p>Seja bem-vindo ao Conhecendo a Fotografia. A fotografia pode parecer complicada no início, mas ela se apoia em três elementos fundamentais que, juntos, controlam a exposição de qualquer imagem. Dominar esses três pilares é o primeiro grande passo para deixar o modo automático para trás.</p>
+            <p>Toda fotografia é, essencialmente, uma questão de luz. O triângulo de exposição representa os três elementos que controlam a luz: a <strong>Abertura</strong>, a <strong>Velocidade do Obturador</strong> e o <strong>ISO</strong>.</p>
+            
+            <figure>
+                <!-- Nome do arquivo corrigido: sem acento e sem espaço -->
+                <img src="triangulo-exposicao.png" alt="Ilustração do Triângulo de Exposição mostrando ISO, Obturador e Abertura" loading="lazy" class="img-fluida">
+                <figcaption>O Triângulo de Exposição.</figcaption>
+            </figure>
+        </section>
 
- <p>Toda fotografia é, essencialmente, uma questão de luz. Quanto de luz entra na câmera, por quanto tempo ela fica exposta e o quanto o sensor reage a ela — essas três decisões determinam se a imagem vai ficar escura demais, clara demais ou perfeitamente equilibrada. É exatamente isso que o triângulo de exposição ensina.</p>
+        <section id="abertura" class="secao">
+            <h2>Abertura do Diafragma (f/)</h2>
+            <p>A abertura controla o tamanho do buraco por onde a luz passa dentro da lente. Quanto menor o número f/ (ex: f/1.8), maior a abertura e mais luz entra. Quanto maior o número f/ (ex: f/16), menor a abertura e menos luz passa.</p>
+            <p>Ela também define a <strong>profundidade de campo</strong>. Uma abertura grande (f/1.8) desfoca o fundo (efeito <em>bokeh</em>). Uma abertura pequena (f/16) deixa tudo em foco (ideal para paisagens).</p>
+            
+            <div class="comparacao">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80" alt="Retrato com fundo desfocado usando f/1.8" loading="lazy" class="img-fluida">
+                    <figcaption>f/1.8: Fundo desfocado (bokeh). Foto: Jurica Koletić / Unsplash</figcaption>
+                </figure>
+                <figure>
+                    <!-- Espaço pronto para você colocar a sua foto f/16 -->
+                    <div class="espaco-imagem-sua">Sua imagem f/16 aqui</div>
+                    <figcaption>f/16: Tudo em foco.</figcaption>
+                </figure>
+            </div>
+        </section>
 
- <h1>Os Pilares da Fotografia — O Triângulo de Exposição</h1>
+        <section id="obturador" class="secao">
+            <h2>Velocidade do Obturador</h2>
+            <p>Determina por quanto tempo o sensor fica exposto à luz. Uma velocidade alta (ex: 1/1000s) congela o movimento. Uma velocidade baixa (ex: 1/4s) borra o movimento, criando rastros de luz ou efeito "véu de noiva" em cachoeiras.</p>
+            <p><strong>A Regra do Inverso:</strong> Para evitar fotos tremidas ao fotografar segurando a câmera, use uma velocidade mínima igual ao inverso da distância focal da lente. Por exemplo, com uma lente de <strong>50mm</strong>, não use velocidade menor que <strong>1/50s</strong>.</p>
+            
+            <figure>
+                <!-- Imagem alterada para uma cachoeira, ilustrando melhor o efeito de velocidade baixa -->
+                <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=700&q=80" alt="Cachoeira com a água borrada pelo movimento suave" loading="lazy" class="img-fluida">
+                <figcaption>Baixa velocidade: Efeito seda na água. Foto: Paul Jarvis / Unsplash</figcaption>
+            </figure>
+        </section>
 
- <p>O triângulo de exposição é o conceito central da fotografia técnica. Ele representa os três elementos que controlam a quantidade de luz que chega ao sensor da câmera: a Abertura, a Velocidade do Obturador e o ISO. Alterar qualquer um deles afeta os outros dois, por isso é importante entender como cada um funciona individualmente e como eles se relacionam entre si.</p>
+        <section id="iso" class="secao">
+            <h2>ISO</h2>
+            <p>Mede a sensibilidade do sensor à luz. ISO baixo (100) resulta em imagem limpa. ISO alto (3200) capta mais luz, mas gera <strong>ruído digital</strong> (grãos na imagem).</p>
+            <p>O ideal é manter o ISO o mais baixo possível, aumentando-o apenas quando a abertura e a velocidade já estiverem no limite.</p>
+            
+            <figure>
+                <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=700&q=80" alt="Foto noturna de cidade iluminada" loading="lazy" class="img-fluida">
+                <figcaption>ISO Alto: Permite fotos noturnas, mas pode gerar ruído. Foto: Jase Bloor / Unsplash</figcaption>
+            </figure>
+        </section>
 
- <img class="triângulo"src="triângulo Fotografia.png" alt="Triângulo de Exposição" width="10">
-<h3><ul> <li>ISO</li> <li>Shutter</li> <li>F\Abertura do diafragma</li></ul> </h3>
- <h1>Abertura (Diafragma)</h1>
+        <section id="resumo" class="secao destaque">
+            <h2>Como os três pilares funcionam juntos</h2>
+            <p>Na fotografia, medimos a luz em <strong>"Stops"</strong> (pontos de luz). Cada stop inteiro que você sobe dobra a quantidade de luz; se descer um stop, corta a luz pela metade. O segredo é compensar: se você fecha a abertura em 1 stop (perdendo luz), precisa diminuir a velocidade em 1 stop (ganhando luz) ou dobrar o ISO para manter a mesma exposição.</p>
+            
+            <div class="tabela-responsiva">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pilar</th>
+                            <th>O que controla?</th>
+                            <th>Efeito visual</th>
+                            <th>Exemplos práticos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Abertura (f/)</strong></td>
+                            <td>Tamanho da entrada de luz</td>
+                            <td>Profundidade de campo (desfoque)</td>
+                            <td>Retrato: f/1.8 a f/2.8<br>Paisagem: f/8 a f/11</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Obturador</strong></td>
+                            <td>Tempo de entrada de luz</td>
+                            <td>Congelar ou borrar o movimento</td>
+                            <td>Esporte: 1/1000s<br>Cachoeira: 1/4s</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ISO</strong></td>
+                            <td>Sensibilidade do sensor</td>
+                            <td>Ruído digital (granulado)</td>
+                            <td>Dia ensolarado: ISO 100<br>Show noturno: ISO 3200+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>Próximo passo: Modos de Disparo</h3>
+            <p>Em vez de ir direto para o Manual (M), tente os modos semiautomáticos: <strong>A/Av</strong> (Prioridade de Abertura), onde você escolhe o f/ e a câmera calcula o resto; ou <strong>S/Tv</strong> (Prioridade de Obturador), onde você escolhe a velocidade.</p>
+        </section>
 
- <p>A abertura, também chamada de diafragma, controla o tamanho do buraco por onde a luz passa dentro da lente. Ela é medida em valores f/, como f/1.8, f/5.6 ou f/16. Quanto menor o número f/, maior a abertura e mais luz entra na câmera. Quanto maior o número f/, menor a abertura e menos luz passa.</p>
+        <section id="simulador" class="secao">
+            <h2>Simulador Interativo</h2>
+            <p>Brinque com os controles abaixo para ver como o triângulo afeta a imagem final.</p>
+            
+            <div class="simulador-container">
+                <div class="simulador-imagem" id="sim-img-container">
+                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&q=80" alt="Imagem base para o simulador" id="sim-img">
+                    <div id="sim-noise"></div>
+                </div>
+                
+                <div class="simulador-controles">
+                    <div class="exposimetro">
+                        <span>Exposição: </span><strong id="indicador-exp">Correta (0)</strong>
+                    </div>
+                    <div class="explicacao-simulador" id="texto-explicativo">Ajuste os valores para começar.</div>
 
- <p>Além de controlar a luz, a abertura também define a profundidade de campo. Com uma abertura grande (f/1.8), o fundo fica desfocado, criando o famoso efeito bokeh, muito usado em retratos. Com uma abertura pequena (f/16), tudo fica em foco, ideal para paisagens.</p>
+                    <div class="controle">
+                        <label for="sim-abertura">Abertura: <span id="val-abertura">f/5.6</span></label>
+                        <input type="range" id="sim-abertura" min="1" max="7" value="5">
+                    </div>
+                    
+                    <div class="controle">
+                        <label for="sim-velocidade">Velocidade: <span id="val-velocidade">1/125s</span></label>
+                        <input type="range" id="sim-velocidade" min="1" max="7" value="4">
+                    </div>
+                    
+                    <div class="controle">
+                        <label for="sim-iso">ISO: <span id="val-iso">100</span></label>
+                        <input type="range" id="sim-iso" min="1" max="7" value="1">
+                    </div>
+                </div>
+            </div>
+        </section>
 
- <!-- Retrato masculino com fundo suave — representa abertura -->
- <img class="abertura"src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80" alt="Retrato masculino com fundo desfocado — efeito bokeh da abertura" width="600">
+        <section id="quiz" class="secao destaque">
+            <h2>Mini Quiz: Teste seus conhecimentos</h2>
+            <div id="quiz-container">
+                <p id="pergunta-texto">Carregando pergunta...</p>
+                <div id="opcoes-quiz"></div>
+                <p id="feedback-quiz" aria-live="polite"></p>
+            </div>
+            
+            <h3>Desafio Prático</h3>
+            <p>Pegue sua câmera (ou celular em modo Pro) e tire 3 fotos da mesma coisa variando apenas a abertura (f/). Tente f/2.8, f/8 e f/16. Observe o que acontece com o fundo!</p>
+        </section>
 
- <h1>Velocidade do Obturador (Shutter)</h1>
+        <section id="glossario" class="secao">
+            <h2>Glossário Rápido</h2>
+            <dl>
+                <dt>Bokeh</dt>
+                <dd>A qualidade estética do desfoque no fundo de uma fotografia.</dd>
+                <dt>Ruído</dt>
+                <dd>Granulação visual que aparece na foto quando usamos um ISO muito alto.</dd>
+                <dt>Exposição</dt>
+                <dd>A quantidade total de luz que chega ao sensor da câmera.</dd>
+            </dl>
+        </section>
+    </main>
 
- <p>A velocidade do obturador determina por quanto tempo o sensor da câmera fica exposto à luz. Ela é medida em frações de segundo, como 1/1000s, 1/60s ou até vários segundos. Uma velocidade alta congela o movimento — perfeita para esportes e animais. Já uma velocidade baixa deixa o movimento borrar, criando efeitos de rastro de luz ou a suavidade da água em rios e cachoeiras.</p>
+    <footer class="rodape">
+        <p>&copy; 2024 Conhecendo a Fotografia. Feito com foco na educação.</p>
+    </footer>
 
- <p>A velocidade do obturador também afeta a nitidez quando a câmera está na mão. Velocidades muito lentas sem tripé causam tremido. Como regra geral, use uma velocidade mínima equivalente ao inverso do comprimento focal da sua lente.</p>
+    <!-- TODO O CÓDIGO JAVASCRIPT AGORA FICA AQUI, DENTRO DE <script> -->
+    <script>
+        // ==========================================
+        // SIMULADOR DO TRIÂNGULO DE EXPOSIÇÃO
+        // ==========================================
+        
+        const displayAbertura = {1: "f/1.4", 2: "f/2.0", 3: "f/2.8", 4: "f/4.0", 5: "f/5.6", 6: "f/11", 7: "f/22"};
+        const displayVelocidade = {1: "1/4000s", 2: "1/1000s", 3: "1/250s", 4: "1/60s", 5: "1/15s", 6: "1/4s", 7: "1s"};
+        const displayIso = {1: "100", 2: "200", 3: "400", 4: "800", 5: "1600", 6: "3200", 7: "6400"};
 
- <!-- Paisagem com lago e montanhas — representa cena de natureza -->
- <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=700&q=80" alt="Paisagem com lago e montanhas — exemplo de fotografia de natureza" width="600">
+        const inputAb = document.getElementById('sim-abertura');
+        const inputVel = document.getElementById('sim-velocidade');
+        const inputIso = document.getElementById('sim-iso');
+        const imgSim = document.getElementById('sim-img');
+        const noiseSim = document.getElementById('sim-noise');
+        const expTexto = document.getElementById('indicador-exp');
+        const txtExplicativo = document.getElementById('texto-explicativo');
 
- <h1>ISO</h1>
+        function atualizarSimulador() {
+            let valAb = parseInt(inputAb.value);
+            let valVel = parseInt(inputVel.value);
+            let valIso = parseInt(inputIso.value);
 
- <p>O ISO mede a sensibilidade do sensor da câmera à luz. Com ISO baixo (ex: ISO 100), o sensor é menos sensível e a imagem fica mais limpa — ideal para dias ensolarados. Com ISO alto (ex: ISO 3200), o sensor capta mais luz em ambientes escuros, mas a imagem começa a apresentar ruído digital, que aparece como grãos ou manchas na foto.</p>
+            document.getElementById('val-abertura').innerText = displayAbertura[valAb];
+            document.getElementById('val-velocidade').innerText = displayVelocidade[valVel];
+            document.getElementById('val-iso').innerText = displayIso[valIso];
 
- <p>O ideal é sempre usar o menor ISO possível para garantir a melhor qualidade. O ISO deve ser o último recurso quando a abertura e a velocidade já estão no limite. Câmeras mais modernas lidam muito melhor com ISOs altos, produzindo imagens limpas mesmo com pouca luz.</p>
+            let luzAb = 4 - valAb; 
+            let luzVel = valVel - 4; 
+            let luzIso = valIso - 4; 
+            let expoTotal = luzAb + luzVel + luzIso;
 
- <!-- Foto noturna de rua com luzes — representa ISO alto em ambiente escuro -->
- <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=700&q=80" alt="Fotografia noturna de cidade — situação que exige ISO alto" width="600">
+            if (expoTotal === 0) {
+                expTexto.innerText = "Correta (0)";
+                expTexto.style.color = "#2ecc71";
+            } else if (expoTotal > 0) {
+                expTexto.innerText = `Superexposta (+${expoTotal} stops)`;
+                expTexto.style.color = "#f1c40f";
+            } else {
+                expTexto.innerText = `Subexposta (${expoTotal} stops)`;
+                expTexto.style.color = "#e74c3c";
+            }
 
- <h1>Como os três pilares funcionam juntos</h1>
+            let brilho = 100 + (expoTotal * 30);
+            let desfoque = Math.max(0, (5 - valAb)); 
+            let borrao = valVel > 5 ? (valVel - 5) * 2 : 0;
+            let blurTotal = desfoque + borrao;
+            imgSim.style.filter = `brightness(${brilho}%) blur(${blurTotal}px)`;
 
- <p>O grande desafio da fotografia é equilibrar os três ao mesmo tempo. Se você aumenta o ISO para fotografar num ambiente escuro, pode aumentar o ruído. Se você abre o diafragma para compensar, perde profundidade de campo. Se você diminui a velocidade para ganhar luz, arrisca borrar a imagem. Entender esse jogo de compensações é o que torna a fotografia técnica tão fascinante — e é o caminho para ter controle total sobre as suas imagens.</p>
+            let opacidadeRuido = (valIso - 1) / 8;
+            noiseSim.style.opacity = opacidadeRuido;
 
+            let texto = "";
+            if (valAb <= 2) texto += "Fundo bem desfocado (bokeh). ";
+            if (valAb >= 6) texto += "Tudo nítido. ";
+            if (valVel >= 6) texto += "Risco de foto borrada. ";
+            if (valVel <= 2) texto += "Movimento congelado. ";
+            if (valIso >= 5) texto += "Imagem muito granulada (ruído).";
+            
+            txtExplicativo.innerText = texto || "Valores equilibrados.";
+        }
+
+        inputAb.addEventListener('input', atualizarSimulador);
+        inputVel.addEventListener('input', atualizarSimulador);
+        inputIso.addEventListener('input', atualizarSimulador);
+        atualizarSimulador();
+
+        // ==========================================
+        // LÓGICA DO MINI QUIZ
+        // ==========================================
+        const perguntas = [
+            {
+                pergunta: "Para desfocar o fundo de um retrato, o que você deve fazer?",
+                opcoes: ["Usar um número f/ alto (ex: f/16)", "Usar um número f/ baixo (ex: f/1.8)", "Aumentar o ISO para 6400"],
+                correta: 1
+            },
+            {
+                pergunta: "Você está fotografando um jogo de futebol. Qual velocidade usar para congelar o chute?",
+                opcoes: ["1/4s", "1/60s", "1/1000s"],
+                correta: 2
+            },
+            {
+                pergunta: "O que acontece se você aumentar o ISO em um ambiente escuro?",
+                opcoes: ["A foto fica mais clara, mas ganha ruído (grãos)", "A foto fica mais escura e nítida", "A profundidade de campo aumenta"],
+                correta: 0
+            }
+        ];
+
+        let perguntaAtual = 0;
+
+        function carregarQuiz() {
+            if (perguntaAtual >= perguntas.length) {
+                document.getElementById("quiz-container").innerHTML = "<p>Parabéns! Você completou o quiz.</p>";
+                return;
+            }
+
+            const q = perguntas[perguntaAtual];
+            document.getElementById("pergunta-texto").innerText = q.pergunta;
+            
+            const divOpcoes = document.getElementById("opcoes-quiz");
+            divOpcoes.innerHTML = "";
+            document.getElementById("feedback-quiz").innerText = "";
+
+            q.opcoes.forEach((opcao, index) => {
+                const btn = document.createElement("button");
+                btn.className = "quiz-btn";
+                btn.innerText = opcao;
+                btn.onclick = () => verificarResposta(index, btn, q.correta);
+                divOpcoes.appendChild(btn);
+            });
+        }
+
+        function verificarResposta(escolhida, botaoElemento, correta) {
+            const botoes = document.querySelectorAll(".quiz-btn");
+            botoes.forEach(b => b.disabled = true);
+
+            if (escolhida === correta) {
+                botaoElemento.classList.add("correta");
+                document.getElementById("feedback-quiz").innerText = "Correto! Muito bem.";
+                setTimeout(() => {
+                    perguntaAtual++;
+                    carregarQuiz();
+                }, 1500);
+            } else {
+                botaoElemento.classList.add("errada");
+                botoes[correta].classList.add("correta");
+                document.getElementById("feedback-quiz").innerText = "Incorreto. A resposta certa era a verde.";
+                setTimeout(() => {
+                    perguntaAtual++;
+                    carregarQuiz();
+                }, 2500);
+            }
+        }
+
+        carregarQuiz();
+    </script>
 </body>
 </html>
