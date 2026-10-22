@@ -24,7 +24,6 @@
                 <li><a href="#iso">ISO</a></li>
                 <li><a href="#summary">Resumo</a></li>
                 <li><a href="#simulator">Simulador</a></li>
-                <li><a href="#quiz">Quiz</a></li>
             </ul>
         </nav>
     </header>
@@ -125,7 +124,8 @@
             
             <div class="simulator-container">
                 <div class="simulator-image" id="sim-img-container">
-                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&q=80" alt="Imagem base para o simulador" id="sim-img">
+                    <!-- Imagem atualizada para uma paisagem livre de direitos -->
+                    <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800&q=80" alt="Imagem base para o simulador" id="sim-img">
                     <div id="sim-noise"></div>
                 </div>
                 
@@ -135,30 +135,22 @@
                     </div>
                     <div class="simulator-explanation" id="explanation-text">Ajuste os valores para começar.</div>
 
+                    <!-- Valores iniciais ajustados para a imagem começar nítida (f/11) -->
                     <div class="control">
-                        <label for="sim-aperture">Abertura: <span id="val-aperture">f/5.6</span></label>
-                        <input type="range" id="sim-aperture" min="1" max="7" value="5">
+                        <label for="sim-aperture">Abertura: <span id="val-aperture">f/11</span></label>
+                        <input type="range" id="sim-aperture" min="1" max="7" value="6">
                     </div>
                     
                     <div class="control">
-                        <label for="sim-shutter">Velocidade: <span id="val-shutter">1/125s</span></label>
-                        <input type="range" id="sim-shutter" min="1" max="7" value="4">
+                        <label for="sim-shutter">Velocidade: <span id="val-shutter">1/15s</span></label>
+                        <input type="range" id="sim-shutter" min="1" max="7" value="5">
                     </div>
                     
                     <div class="control">
-                        <label for="sim-iso">ISO: <span id="val-iso">100</span></label>
-                        <input type="range" id="sim-iso" min="1" max="7" value="1">
+                        <label for="sim-iso">ISO: <span id="val-iso">1600</span></label>
+                        <input type="range" id="sim-iso" min="1" max="7" value="5">
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="quiz" class="section highlight">
-            <h2>Mini Quiz: Teste seus conhecimentos</h2>
-            <div id="quiz-container">
-                <p id="question-text">Carregando pergunta...</p>
-                <div id="quiz-options"></div>
-                <p id="quiz-feedback" aria-live="polite"></p>
             </div>
         </section>
 
@@ -235,7 +227,7 @@
             if (valAperture >= 6) text += "Tudo nítido. ";
             if (valShutter >= 6) text += "Risco de foto borrada. ";
             if (valShutter <= 2) text += "Movimento congelado. ";
-            if (valIso >= 5) text += "Imagem muito granulada (ruído).";
+            if (valIso >= 5) text += "Imagem mais granulada (ruído).";
             
             explanationText.innerText = text || "Valores equilibrados.";
         }
@@ -243,76 +235,9 @@
         inputAperture.addEventListener('input', updateSimulator);
         inputShutter.addEventListener('input', updateSimulator);
         inputIso.addEventListener('input', updateSimulator);
+        
+        // Inicializa o simulador ao carregar a página
         updateSimulator();
-
-        // ==========================================
-        // MINI QUIZ LOGIC
-        // ==========================================
-        const questions = [
-            {
-                question: "Para desfocar o fundo de um retrato, o que você deve fazer?",
-                options: ["Usar um número f/ alto (ex: f/16)", "Usar um número f/ baixo (ex: f/1.8)", "Aumentar o ISO para 6400"],
-                correctAnswer: 1
-            },
-            {
-                question: "Você está fotografando um jogo de futebol. Qual velocidade usar para congelar o chute?",
-                options: ["1/4s", "1/60s", "1/1000s"],
-                correctAnswer: 2
-            },
-            {
-                question: "O que acontece se você aumentar o ISO em um ambiente escuro?",
-                options: ["A foto fica mais clara, mas ganha ruído (grãos)", "A foto fica mais escura e nítida", "A profundidade de campo aumenta"],
-                correctAnswer: 0
-            }
-        ];
-
-        let currentQuestion = 0;
-
-        function loadQuiz() {
-            if (currentQuestion >= questions.length) {
-                document.getElementById("quiz-container").innerHTML = "<p>Parabéns! Você completou o quiz.</p>";
-                return;
-            }
-
-            const q = questions[currentQuestion];
-            document.getElementById("question-text").innerText = q.question;
-            
-            const optionsDiv = document.getElementById("quiz-options");
-            optionsDiv.innerHTML = "";
-            document.getElementById("quiz-feedback").innerText = "";
-
-            q.options.forEach((option, index) => {
-                const btn = document.createElement("button");
-                btn.className = "quiz-btn";
-                btn.innerText = option;
-                btn.onclick = () => checkAnswer(index, btn, q.correctAnswer);
-                optionsDiv.appendChild(btn);
-            });
-        }
-
-        function checkAnswer(selected, buttonElement, correct) {
-            const allButtons = document.querySelectorAll(".quiz-btn");
-            allButtons.forEach(b => b.disabled = true);
-
-            if (selected === correct) {
-                buttonElement.classList.add("correct");
-                document.getElementById("quiz-feedback").innerText = "Correto! Muito bem.";
-                setTimeout(() => {
-                    currentQuestion++;
-                    loadQuiz();
-                }, 1500);
-            } else {
-                buttonElement.classList.add("wrong");
-                allButtons[correct].classList.add("correct");
-                document.getElementById("quiz-feedback").innerText = "Incorreto. A resposta certa era a verde.";
-                setTimeout(() => {
-                    currentQuestion++;
-                    loadQuiz();
-                }, 2500);
-            }
-        }
-
-        loadQuiz();
     </script>
 </body>
 </html>
