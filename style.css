@@ -2,12 +2,12 @@
    CSS Variables for Light / Dark Mode and Colors
    ========================================================================== */
 :root {
-    --bg-color: #fafafa;
-    --text-color: #333333;
-    --primary-color: #2c3e50;
-    --secondary-color: #e74c3c;
-    --highlight-bg-color: #ecf0f1;
-    --border-color: #dddddd;
+    --bg-color: #e9ecef; /* Novo fundo cinza claro */
+    --text-color: #212529;
+    --primary-color: #0056b3; /* Azul vibrante */
+    --secondary-color: #d9534f;
+    --highlight-bg-color: #ffffff; /* Caixas de conteúdo brancas */
+    --border-color: #ced4da;
     --main-font: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -15,7 +15,7 @@
     :root {
         --bg-color: #121212;
         --text-color: #e0e0e0;
-        --primary-color: #f1c40f;
+        --primary-color: #4dabf7;
         --secondary-color: #e74c3c;
         --highlight-bg-color: #1e1e1e;
         --border-color: #333333;
@@ -128,6 +128,7 @@ a:focus, button:focus, input:focus {
     padding: 2rem;
     border-radius: 8px;
     margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Leve sombra para destacar do fundo */
 }
 
 .fluid-img {
@@ -171,6 +172,7 @@ figcaption {
 table {
     width: 100%;
     border-collapse: collapse;
+    background-color: var(--highlight-bg-color);
 }
 th, td {
     border: 1px solid var(--border-color);
@@ -183,20 +185,22 @@ th {
 }
 
 /* ==========================================================================
-   Simulator and Quiz
+   Simulator
    ========================================================================== */
 .simulator-container {
-    background: #222; 
+    background: #1e1e1e; 
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 .simulator-image {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 350px;
     overflow: hidden;
     background: #000;
+    border-radius: 4px;
 }
 #sim-img {
     width: 100%;
@@ -215,46 +219,33 @@ th {
 }
 
 .simulator-controls {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 .control {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 .control label {
     display: block;
     margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 input[type=range] {
     width: 100%;
+    cursor: pointer;
 }
 .light-meter {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     text-align: center;
-}
-
-.quiz-btn {
-    display: block;
-    width: 100%;
+    background: #333;
     padding: 10px;
-    margin-bottom: 10px;
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-    cursor: pointer;
     border-radius: 4px;
-    transition: background 0.3s;
 }
-.quiz-btn:hover {
-    background-color: var(--border-color);
-}
-.quiz-btn.correct {
-    background-color: #2ecc71;
-    color: black;
-}
-.quiz-btn.wrong {
-    background-color: #e74c3c;
-    color: white;
+.simulator-explanation {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: #ccc;
 }
 
 /* ==========================================================================
